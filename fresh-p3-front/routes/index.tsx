@@ -14,21 +14,18 @@ type Data = {
   query: string;
 };
 
-const API_KEY = Deno.env.get("API_KEY");
-
 export const handler: Handlers<Data> = {
   GET: async (req: Request, ctx: FreshContext<unknown, Data>) => {
     const url = new URL(req.url);
     const name = url.searchParams.get("name");
     const query = name ?? "";
     const columns = url.searchParams.get("columns") ?? "2";
-
-    let movies: Movie[] = [];
+    const API_KEY = Deno.env.get("API_KEY");
 
     if (name) {
       try {
         const response = await fetch(
-          `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=en-US&page=1`,
+          `https://api.themoviedb.org/3/search/movie?query=${name}&include_adult=false&language=en-US&page=1`,
           {
             method: "GET",
             headers: {
@@ -43,13 +40,14 @@ export const handler: Handlers<Data> = {
         }
 
         const data = await response.json();
-        movies = data.results;
+
+        return ctx.render({ movies: data.results, columns, query });
       } catch (error) {
         console.error("Error al obtener películas:", error);
       }
     }
 
-    return ctx.render({ movies, columns, query });
+    return ctx.render({ movies: [], columns, query });
   },
 };
 

@@ -1,0 +1,133 @@
+.formulario {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+  gap: 10px;
+  width: 100%;
+}
+
+.boton-buscar {
+  padding: 12px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+.input {
+  width: 30%;
+  text-align: center;
+  font-size: 20px;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 3%;
+  margin: 3%;
+}
+
+.botones a {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  border: 2px solid;
+  border-color: black;
+  font-size: 14px;
+}
+
+.botones a:hover {
+  border-color: red;
+  color: red;
+}
+
+.movieCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 160px;
+  background-color: #f9f9f9;
+  gap: 10px;
+  img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  h2 {
+    font-size: 16px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  p {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.moviesContainer1 {
+  display: grid;
+  grid-template-columns: 50px;
+  grid-template-rows: auto;
+  justify-content: space-evenly;
+  gap: 30px;
+  padding: 30px;
+}
+
+.moviesContainer2 {
+  display: grid;
+  grid-template-columns: 50px 50px;
+  grid-template-rows: auto;
+  justify-content: space-evenly;
+  gap: 30px;
+  padding: 30px;
+}
+
+.moviesContainer3 {
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: auto;
+  justify-content: space-evenly;
+  gap: 30px;
+  padding: 30px;
+}
+
+.moviesContainer4 {
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: auto;
+  justify-content: space-evenly;
+  gap: 30px;
+  padding: 30px;
+}
+
+.moviesContainer5 {
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px 50px;
+  grid-template-rows: auto;
+  justify-content: space-evenly;
+  gap: 30px;
+  padding: 30px;
+}
+
+.barra {
+  width: 50px;
+  height: 10px;
+  border: 1px solid;
+  overflow: hidden;
+}
+
+.relleno {
+  height: 10px;
+  background-color: rgb(115, 201, 255);
+}

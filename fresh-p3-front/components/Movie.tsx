@@ -15,7 +15,6 @@ const MovieCard: FunctionComponent<Props> = (props) => {
   return (
     <div class="movieCard">
       <img
-        class="poster"
         src={`https://image.tmdb.org/t/p/original/${backdrop_path}`}
         alt={original_title}
       />
